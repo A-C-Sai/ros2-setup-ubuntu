@@ -78,6 +78,7 @@ RUN apt-get update -y && apt-get install -y \
 		ros-${ROS_DISTRO}-nav2-bringup \
 		ros-${ROS_DISTRO}-nav2-minimal-tb* \
         ros-${ROS_DISTRO}-dynamixel-sdk* \
+		ros-${ROS_DISTRO}-slam-toolbox \
         libserial-dev \
         python3-pip \
         python3-transforms3d
