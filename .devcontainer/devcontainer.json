@@ -115,7 +115,7 @@
         "C_Cpp.default.includePath": [
           "/opt/ros/jazzy/include/**",
           "/workspaces/${localWorkspaceFolderBasename}/install/interfaces/include/**",
-          "/workspaces/${localWorkspaceFolderBasename}/src/dxl_test/include/**",
+          // "/workspaces/${localWorkspaceFolderBasename}/src/<pkg>/include/**",
           "/workspaces/${localWorkspaceFolderBasename}/src/my_robot_hardware/include/**"
         ],
         "C_Cpp.default.compilerPath": "/usr/bin/g++",
