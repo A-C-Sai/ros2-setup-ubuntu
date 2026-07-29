@@ -125,10 +125,10 @@ RUN useradd -m -s /bin/bash jazzy && \
 #   - build alias: one-command workspace rebuild + source
 # -----------------------------------------------------------------------------
 RUN echo "# ── ROS2 Environment ──────────────────────────────────────────────" >> /home/jazzy/.bashrc && \
-    echo "source /opt/ros/jazzy/setup.bash"                                    >> /home/jazzy/.bashrc && \
-    echo "export ROS_DOMAIN_ID=42"                                             >> /home/jazzy/.bashrc && \
+	echo "export ROS_DOMAIN_ID=42"                                             >> /home/jazzy/.bashrc && \
     echo "export ROS_AUTOMATIC_DISCOVERY_RANGE=LOCALHOST"                      >> /home/jazzy/.bashrc && \
 	echo "export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp"                      >> /home/jazzy/.bashrc && \
+    echo "source /opt/ros/jazzy/setup.bash"                                    >> /home/jazzy/.bashrc && \
     echo ""                                                                    >> /home/jazzy/.bashrc && \
     echo "# Source workspace overlay (populated after first colcon build)"     >> /home/jazzy/.bashrc && \
     echo '[ -f /workspaces/*/install/setup.bash ] && source /workspaces/*/install/setup.bash' >> /home/jazzy/.bashrc && \
