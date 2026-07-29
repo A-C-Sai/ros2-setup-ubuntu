@@ -79,6 +79,8 @@ RUN apt-get update -y && apt-get install -y \
 		ros-${ROS_DISTRO}-nav2-minimal-tb* \
         ros-${ROS_DISTRO}-dynamixel-sdk* \
 		ros-${ROS_DISTRO}-slam-toolbox \
+		ros-${ROS_DISTRO}-moveit \
+		ros-${ROS_DISTRO}-rmw-cyclonedds-cpp \
         libserial-dev \
         python3-pip \
         python3-transforms3d
@@ -126,6 +128,7 @@ RUN echo "# ── ROS2 Environment ──────────────�
     echo "source /opt/ros/jazzy/setup.bash"                                    >> /home/jazzy/.bashrc && \
     echo "export ROS_DOMAIN_ID=42"                                             >> /home/jazzy/.bashrc && \
     echo "export ROS_AUTOMATIC_DISCOVERY_RANGE=LOCALHOST"                      >> /home/jazzy/.bashrc && \
+	echo "export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp"                      >> /home/jazzy/.bashrc && \
     echo ""                                                                    >> /home/jazzy/.bashrc && \
     echo "# Source workspace overlay (populated after first colcon build)"     >> /home/jazzy/.bashrc && \
     echo '[ -f /workspaces/*/install/setup.bash ] && source /workspaces/*/install/setup.bash' >> /home/jazzy/.bashrc && \
