@@ -69,6 +69,7 @@ RUN apt-get update -y && apt-get install -y \
         ros-${ROS_DISTRO}-gz-ros2-control-demos \
         ros-${ROS_DISTRO}-joint-state-publisher-gui \
         ros-${ROS_DISTRO}-moveit \
+		ros-${ROS_DISTRO}-moveit-py \
         ros-${ROS_DISTRO}-xacro \
         ros-${ROS_DISTRO}-ros2-control \
         ros-${ROS_DISTRO}-ros2-controllers \
