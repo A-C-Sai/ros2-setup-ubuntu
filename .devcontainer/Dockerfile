@@ -118,7 +118,7 @@ RUN apt-get update -y && apt-get install -y \
 RUN useradd -m -s /bin/bash jazzy && \
     passwd -d jazzy && \
     echo "jazzy ALL=(ALL:ALL) NOPASSWD:ALL" >> /etc/sudoers && \
-    usermod -aG dialout,root,input jazzy
+    usermod -aG dialout,root,input,kvm jazzy
 
 # -----------------------------------------------------------------------------
 # Section 6: User Environment Configuration (~/.bashrc)
