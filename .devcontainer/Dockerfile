@@ -63,7 +63,9 @@ RUN apt-get update -y && apt-get install -y \
 		ros-${ROS_DISTRO}-turtlesim \
 		ros-${ROS_DISTRO}-robot-localization \
 		ros-${ROS_DISTRO}-joy \
+		ros-${ROS_DISTRO}-joy-linux
 		ros-${ROS_DISTRO}-joy-teleop \
+		ros-${ROS_DISTRO}-teleop-twist-joy \
 		ros-${ROS_DISTRO}-tf-transformations \
         ros-${ROS_DISTRO}-gz-ros2-control \
         ros-${ROS_DISTRO}-gz-ros2-control-demos \
@@ -84,7 +86,10 @@ RUN apt-get update -y && apt-get install -y \
 		ros-${ROS_DISTRO}-rmw-cyclonedds-cpp \
         libserial-dev \
         python3-pip \
-        python3-transforms3d
+        python3-transforms3d \
+		joystick \
+		jstest-gtk \
+		evtest
 
 # -----------------------------------------------------------------------------
 # Section 4b: Dynamixel / Serial Hardware Libraries
@@ -113,7 +118,7 @@ RUN apt-get update -y && apt-get install -y \
 RUN useradd -m -s /bin/bash jazzy && \
     passwd -d jazzy && \
     echo "jazzy ALL=(ALL:ALL) NOPASSWD:ALL" >> /etc/sudoers && \
-    usermod -aG dialout,root jazzy
+    usermod -aG dialout,root,input jazzy
 
 # -----------------------------------------------------------------------------
 # Section 6: User Environment Configuration (~/.bashrc)
