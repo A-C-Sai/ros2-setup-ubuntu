@@ -48,9 +48,12 @@
   "runArgs": [
     "--device=/dev/ttyACM0",
     "--device=/dev/input/js1",
+    "--device=/dev/input/event10", // subjective to change. run 'cat /proc/bus/input/devices'
     "--group-add=dialout",
     "--group-add=root",
     "--group-add=input",
+    "--group-add=kvm",
+    "-v", "/run/udev:/run/udev:ro",
     "--network=host",
     "-e", "TZ=Australia/Melbourne",
     "--rm",
