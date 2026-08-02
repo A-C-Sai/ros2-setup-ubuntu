@@ -47,7 +47,10 @@
   // ---------------------------------------------------------------------------
   "runArgs": [
     "--device=/dev/ttyACM0",
+    "--device=/dev/input/js1",
     "--group-add=dialout",
+    "--group-add=root",
+    "--group-add=input",
     "--network=host",
     "-e", "TZ=Australia/Melbourne",
     "--rm",
